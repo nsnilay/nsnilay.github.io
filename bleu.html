@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nilay Shrivastava</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  
+  <style>
+    #p01 {
+      padding-top: 100px;
+    }
+  </style>
+
+  <body>
+    <div class="row">
+      <div class="column" >
+        <h1 style="color:red;"><img src="me.jpg" alt="Nilay" style="height:228px;" align="center"/>
+        </h1>
+      </div>
+      <div class="column">
+        <h2><a href = "index.html" style="text-decoration:none;color:black" align="center">Nilay Shrivastava, IIITDMJ </a></h2>
+        <h3>ECE Undergrad at IIITDMJ ('18)</h3>
+        <h4></h4>
+      </div>
+    </div>
+
+    <div class="topnav" id="myTopnav">
+      <a href="index.html">Home</a>
+      <a href="posts.html">Posts</a>
+      <a href="projects.html">Projects</a>
+      <a href="CV.html">CV</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+
+    <h2><u>BLEU Score (Image Captioning project)</u> </h2>
+    <p>So currently my friend and I are working on this Image Captioning Model for which we studied various different models and tried to come with something on our own. We got pretty decent results based on our limited GPU power. The following post gives the BLEU score of our model.</p>
+    
+    <h4> What is BLEU score?</h4>
+    <p> <a href="https://en.wikipedia.org/wiki/BLEU" target="_blank">BLEU</a> or Bilingual Evaluation Understudy  is an algorithm for evaluating the quality of text which has been machine-translated from one natural language to another. Instead of source and target language being any natural language, here, we have source language as the Image and the target language is English. It is like translating a picture into an English Sentence. That's why BLEU score can be used to evaluate Image Captioning models. </p>
+    
+    <p>Scores are calculated for individual translated segments—generally sentences—by comparing them with a set of good quality reference translations. Those scores are then averaged over the whole corpus to reach an estimate of the translation's overall quality. Intelligibility or grammatical correctness are not taken into account.</p>
+    
+  <div class="row">
+    <div class="column" >
+      <p style="color:#c3acac;"><img src="assets/blog_pics/p1.PNG" alt="python code"   align="top"  />
+      </p>
+    </div>
+    <div float="bottom">
+      <p>Source code for <a href="http://www.nltk.org/_modules/nltk/translate/bleu_score.html">nltk.translate.bleu_score </a>  </p>
+
+    </div>
+  </div>
+    
+    <p id="p01">The above code calculates a BLEU score for upto 3-grams using uniform weights. To evaluate your translations with higher/lower order ngrams,
+      use customized weights. E.g. when accounting for up to 4grams with uniform
+      weights: weights=(0.25,0.25,0.25,0.25)</p>
+    
+    <p>Following are the BLEU score (where B-N means, that uses upto N-grams) on Flickr8k dataset.</p> <img src="assets/blog_pics/p2.PNG">
+    
+    <p>For more details, refer - <a href="http://www.aclweb.org/anthology/P02-1040.pdf" target="_blank">BLEU by Papineni et al</a> and <a href="http://acl2014.org/acl2014/W14-33/pdf/W14-3346.pdf" target="_blank"> Smoothing Techniques for BLEU.</a> These papers provide the complete understanding of the python code and I encourage you to read it.</p>
+  </body>
+</html>
